@@ -1,20 +1,31 @@
 import {StatusBar} from 'expo-status-bar';
 import {ScrollView, Text} from 'react-native';
 import {css, init as klazify} from 'klazify';
-import {useState} from 'react';
 import Buttons from './showcase/Buttons';
 import Texts from './showcase/Texts';
+import {PressStart2P_400Regular} from '@expo-google-fonts/press-start-2p';
+import {useFonts, Roboto_400Regular} from '@expo-google-fonts/roboto';
+import AppLoading from 'expo-app-loading';
 
 export default function App() {
   
+  let [fontsLoaded] = useFonts({
+    PressStart2P_400Regular,
+    Roboto_400Regular,
+  });
+  
+  if (!fontsLoaded) {
+    return <AppLoading/>;
+  }
+  
   klazify({
     theme: {
+      defaultFontFamily: 'Roboto_400Regular',
       blue: '#1f76a9',
     },
     extraGlobalVars: {
       '$rem': 12,
       '$blue-custom': '#37a1e3',
-      // '$primary': '#eaa868',
     },
     customClasses: () => {
       return {
@@ -31,11 +42,9 @@ export default function App() {
     },
   });
   
-  const [toggleBtnColor, setToggleBtnColor] = useState(true);
-  
   return (
     <ScrollView style={css('flex')}
-                contentContainerStyle={css('flex-grow p-1 mt-2')}>
+                contentContainerStyle={css('flex-grow p-1 pt-2')}>
       <StatusBar style="auto"/>
       <Text style={css('text h3')}>
         Klazify is a Style Sheet utility
@@ -46,7 +55,7 @@ export default function App() {
         improve the time and the way how you develop with React Native.
       </Text>
       <Text style={css('text text-md mt-1')}>
-        Klazify loads all the Style Sheets from classes when the App launches and never more you StyleSheet.create()
+        Klazify loads all the Style Sheets from classes at the App launch and never more you StyleSheet.create()
         again, improving performance at runtime.
       </Text>
       <Buttons/>
