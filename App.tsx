@@ -4,8 +4,9 @@ import {css, init as klazify} from 'klazify';
 import Buttons from './showcase/Buttons';
 import Texts from './showcase/Texts';
 import {PressStart2P_400Regular} from '@expo-google-fonts/press-start-2p';
-import {useFonts, Roboto_400Regular} from '@expo-google-fonts/roboto';
+import {Roboto_400Regular, useFonts} from '@expo-google-fonts/roboto';
 import AppLoading from 'expo-app-loading';
+import Grid from './showcase/Grid';
 
 export default function App() {
   
@@ -38,6 +39,13 @@ export default function App() {
         'b-blue': {
           borderColor: '$blue',
         },
+        'col': {
+          flex: 1,
+          flexDirection: 'column',
+        },
+        'col-auto': {
+          flexDirection: 'column',
+        },
       };
     },
   });
@@ -60,6 +68,7 @@ export default function App() {
       </Text>
       <Buttons/>
       <Texts/>
+      <Grid/>
     </ScrollView>
   );
   
