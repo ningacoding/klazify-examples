@@ -31,6 +31,10 @@ export default function Texts() {
         <Text style={css('text h6')}>
             {'Title H6'}
         </Text>
+
+        <Text style={css('text')}>
+            {'Normal text'}
+        </Text>
     </View>;
 
 }

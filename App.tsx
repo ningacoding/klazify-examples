@@ -39,13 +39,7 @@ export default function App() {
         'b-blue': {
           borderColor: '$blue',
         },
-        'col': {
-          flex: 1,
-          flexDirection: 'column',
-        },
-        'col-auto': {
-          flexDirection: 'column',
-        },
+        
       };
     },
   });
@@ -60,7 +54,7 @@ export default function App() {
       <Text style={css('text text-md')}>
         Klazify reuse styles just like CSS classes, highly inspired in bootstrap, but with
         the React Native limitations / features. It gives a profesional and consistent look and feel, it also can
-        improve the time and the way how you develop with React Native.
+        improve the time and the way you develop with React Native.
       </Text>
       <Text style={css('text text-md mt-1')}>
         Klazify loads all the Style Sheets from classes at the App launch and never more you StyleSheet.create()
