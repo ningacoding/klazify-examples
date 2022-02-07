@@ -29,7 +29,7 @@ export default function Shadows() {
                     {'shadow-lg'}
                 </Text>
             </View>
-            <View style={[css('shadow-none bg-white align-items-center b-1 mb-2'), css({width: 100, height: 100})]}>
+            <View style={[css('shadow-none bg-light align-items-center mb-2'), css({width: 100, height: 100})]}>
                 <Text style={css('text center')}>
                     {'shadow-none'}
                 </Text>

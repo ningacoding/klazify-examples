@@ -68,8 +68,8 @@ export default function App() {
       <Texts/>
       <Grid/>
       <Utilities/>
-      <Cards/>
       <Shadows/>
+      <Cards/>
     </ScrollView>
   );
   
