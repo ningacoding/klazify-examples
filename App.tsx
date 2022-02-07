@@ -1,12 +1,18 @@
 import {StatusBar} from 'expo-status-bar';
 import {ScrollView, Text} from 'react-native';
+
+/**
+ * You can use init() method directly,
+ * we are adding an alias as example, you can use it when another init() method conflicts with Klazify init method.
+ */
 import {css, init as klazify} from 'klazify';
-import Buttons from './showcase/Buttons';
-import Texts from './showcase/Texts';
 import {PressStart2P_400Regular} from '@expo-google-fonts/press-start-2p';
 import {Roboto_400Regular, useFonts} from '@expo-google-fonts/roboto';
 import AppLoading from 'expo-app-loading';
+import Buttons from './showcase/Buttons';
+import Texts from './showcase/Texts';
 import Grid from './showcase/Grid';
+import Utilities from './showcase/Utilities';
 
 export default function App() {
   
@@ -33,13 +39,9 @@ export default function App() {
         'custom-class': {
           backgroundColor: '$blue-custom',
         },
-        'bg-blue': {
-          backgroundColor: '$blue',
+        'custom-font': {
+          fontFamily: 'PressStart2P_400Regular',
         },
-        'b-blue': {
-          borderColor: '$blue',
-        },
-        
       };
     },
   });
@@ -63,6 +65,7 @@ export default function App() {
       <Buttons/>
       <Texts/>
       <Grid/>
+      <Utilities/>
     </ScrollView>
   );
   
