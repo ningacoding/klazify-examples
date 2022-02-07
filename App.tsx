@@ -1,11 +1,11 @@
 import {StatusBar} from 'expo-status-bar';
-import {ScrollView, Text} from 'react-native';
+import {ScrollView, Text, View} from 'react-native';
 
 /**
  * You can use init() method directly,
  * we are adding an alias as example, you can use it when another init() method conflicts with Klazify init method.
  */
-import {css, init as klazify} from 'klazify';
+import {css, EStyleSheet, init as klazify} from 'klazify';
 import {PressStart2P_400Regular} from '@expo-google-fonts/press-start-2p';
 import {Roboto_400Regular, useFonts} from '@expo-google-fonts/roboto';
 import AppLoading from 'expo-app-loading';
@@ -15,6 +15,8 @@ import Grid from './showcase/Grid';
 import Utilities from './showcase/Utilities';
 import Cards from './showcase/Cards';
 import Shadows from './showcase/Shadows';
+import {MaterialCommunityIcons} from '@expo/vector-icons';
+import Color from 'color';
 
 export default function App() {
   
@@ -44,6 +46,8 @@ export default function App() {
         'custom-font': {
           fontFamily: 'PressStart2P_400Regular',
         },
+        'text-warn': {color: Color(EStyleSheet.value('$warning')).darken(0.24).hex()},
+        'bg-warn': {backgroundColor: Color(EStyleSheet.value('$warning')).lighten(0.8).hex()},
       };
     },
   });
@@ -64,6 +68,14 @@ export default function App() {
         Klazify loads all the Style Sheets from classes at the App launch and never more you StyleSheet.create()
         again, improving performance at runtime.
       </Text>
+      
+      <View style={css('row align-items-center mt-1 bg-warn p-1 rounded-1-rem')}>
+        <MaterialCommunityIcons name={'alert'} style={css('icon icon-md text-warning center mr-1')}/>
+        <Text style={css('flex text-warn center')}>
+          {'Klazify is NOT a component library, you can build the below example components just by combining, creating or overriding built-in classes.'}
+        </Text>
+      </View>
+      
       <Buttons/>
       <Texts/>
       <Grid/>
