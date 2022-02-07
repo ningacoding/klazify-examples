@@ -3568,10 +3568,10 @@ klaw@^1.0.0:
   optionalDependencies:
     graceful-fs "^4.1.9"
 
-klazify@0.0.1-beta3q:
-  version "0.0.1-beta3q"
-  resolved "https://registry.yarnpkg.com/klazify/-/klazify-0.0.1-beta3q.tgz#a3ae4ef783e4e3a413bc714804052d4fe466b74e"
-  integrity sha512-195pkeD4RjKOlFFWWl4W4v/HrtLftIZXxbzUkjovk11IZefPgdOKIy1iEj2yCkyYiDf3joPM4Hf6f3c7Qtkykg==
+klazify@0.0.1-beta3s:
+  version "0.0.1-beta3s"
+  resolved "https://registry.yarnpkg.com/klazify/-/klazify-0.0.1-beta3s.tgz#29bb4b8432b68f81b025fb7aec21de70e38bb5eb"
+  integrity sha512-bvZo4t5Dz8KiqOA2M3Jk6kxfFu4fr3hofQjANYIyYUc690fRD3ev1bY8ABSF8rny+yfVycsvXCijbKmQNbZ+6Q==
   dependencies:
     color "3.2.1"
     lodash "4.17.21"
@@ -4595,6 +4595,11 @@ react-native-extended-stylesheet@0.12.0:
   dependencies:
     css-mediaquery "^0.1.2"
     object-resolve-path "^1.1.0"
+
+react-native-material-menu@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/react-native-material-menu/-/react-native-material-menu-2.0.0.tgz#139f407a52fbc0d47e5351d50ac769e05812da5c"
+  integrity sha512-SmO9PLE3E469EPbVWZqvdu6JGPPZIm7YjqDcWs2PPoY0k7w2V9tFo3BmmLXNzNZDCVCAi+PPSsL7h/5WkfHcSg==
 
 react-native-web@0.17.1:
   version "0.17.1"

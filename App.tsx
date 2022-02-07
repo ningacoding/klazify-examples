@@ -5,7 +5,7 @@ import {ScrollView, Text, View} from 'react-native';
  * You can use init() method directly,
  * we are adding an alias as example, you can use it when another init() method conflicts with Klazify init method.
  */
-import {css, EStyleSheet, init as klazify} from 'klazify';
+import {css, init as klazify} from 'klazify';
 import {PressStart2P_400Regular} from '@expo-google-fonts/press-start-2p';
 import {Roboto_400Regular, useFonts} from '@expo-google-fonts/roboto';
 import AppLoading from 'expo-app-loading';
@@ -16,7 +16,8 @@ import Utilities from './showcase/Utilities';
 import Cards from './showcase/Cards';
 import Shadows from './showcase/Shadows';
 import {MaterialCommunityIcons} from '@expo/vector-icons';
-import Color from 'color';
+import Alerts from './showcase/Alerts';
+import Forms from './showcase/Forms';
 
 export default function App() {
   
@@ -46,8 +47,30 @@ export default function App() {
         'custom-font': {
           fontFamily: 'PressStart2P_400Regular',
         },
-        'text-warn': {color: Color(EStyleSheet.value('$warning')).darken(0.24).hex()},
-        'bg-warn': {backgroundColor: Color(EStyleSheet.value('$warning')).lighten(0.8).hex()},
+        'input-active': {
+          borderWidth: 1,
+          borderColor: '$primary',
+        },
+        'input-error': {
+          borderWidth: 1,
+          borderColor: '$danger',
+        },
+        'input': {
+          borderWidth: 1,
+          borderColor: '$gray2',
+          paddingHorizontal: "1rem",
+          paddingVertical: "0.75rem",
+          margin: 0,
+        },
+        'text-area': {
+          borderWidth: 1,
+          borderColor: '$gray2',
+          paddingHorizontal: "1rem",
+          paddingVertical: "0.75rem",
+          margin: 0,
+          maxHeight: 100,
+        },
+        
       };
     },
   });
@@ -69,9 +92,9 @@ export default function App() {
         again, improving performance at runtime.
       </Text>
       
-      <View style={css('row align-items-center mt-1 bg-warn p-1 rounded-1-rem')}>
+      <View style={css('row center mt-1 alert-warning p-1 rounded-3')}>
         <MaterialCommunityIcons name={'alert'} style={css('icon icon-md text-warning center mr-1')}/>
-        <Text style={css('flex text-warn center')}>
+        <Text style={css('flex alert-text-warning center')}>
           {'Klazify is NOT a component library, you can build the below example components just by combining, creating or overriding built-in classes.'}
         </Text>
       </View>
@@ -79,9 +102,12 @@ export default function App() {
       <Buttons/>
       <Texts/>
       <Grid/>
+      <Forms/>
       <Utilities/>
       <Shadows/>
       <Cards/>
+      <Alerts/>
+    
     </ScrollView>
   );
   
