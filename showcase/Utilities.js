@@ -1,5 +1,6 @@
 import {Text, View} from 'react-native';
 import {css} from 'klazify';
+import Separator from '../components/separator';
 
 export default function Utilities() {
     return <View style={css('')}>
@@ -46,7 +47,7 @@ export default function Utilities() {
         <Text style={css('text h3 mt-1')}>
             {'Separator 👇'}
         </Text>
-        <View style={[css({height: 1}), css('my-2 bg-gray-2')]}/>
+        <Separator/>
 
         <Text style={css('text h3')}>
             {'Backgrounds'}

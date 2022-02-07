@@ -13,6 +13,8 @@ import Buttons from './showcase/Buttons';
 import Texts from './showcase/Texts';
 import Grid from './showcase/Grid';
 import Utilities from './showcase/Utilities';
+import Cards from './showcase/Cards';
+import Shadows from './showcase/Shadows';
 
 export default function App() {
   
@@ -66,6 +68,8 @@ export default function App() {
       <Texts/>
       <Grid/>
       <Utilities/>
+      <Cards/>
+      <Shadows/>
     </ScrollView>
   );
   
