@@ -47,29 +47,6 @@ export default function App() {
         'custom-font': {
           fontFamily: 'PressStart2P_400Regular',
         },
-        'input-active': {
-          borderWidth: 1,
-          borderColor: '$primary',
-        },
-        'input-error': {
-          borderWidth: 1,
-          borderColor: '$danger',
-        },
-        'input': {
-          borderWidth: 1,
-          borderColor: '$gray2',
-          paddingHorizontal: "1rem",
-          paddingVertical: "0.75rem",
-          margin: 0,
-        },
-        'text-area': {
-          borderWidth: 1,
-          borderColor: '$gray2',
-          paddingHorizontal: "1rem",
-          paddingVertical: "0.75rem",
-          margin: 0,
-          maxHeight: 100,
-        },
         
       };
     },
