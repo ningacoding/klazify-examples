@@ -33,7 +33,6 @@ export default function App() {
   klazify({
     theme: {
       defaultFontFamily: 'Roboto_400Regular',
-      blue: '#1f76a9',
     },
     extraGlobalVars: {
       '$rem': 12,

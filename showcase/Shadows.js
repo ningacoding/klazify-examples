@@ -9,28 +9,28 @@ export default function Shadows() {
 
         <View style={css('row flex-wrap justify-content-between')}>
 
-            <View style={[css('shadow-sm bg-white align-items-center mb-2'), css({width: 100, height: 100})]}>
-                <Text style={css('text center')}>
+            <View style={[css('shadow-sm bg-white center mb-2'), css({width: 100, height: 100})]}>
+                <Text style={css('text')}>
                     {'shadow-sm'}
                 </Text>
             </View>
-            <View style={[css('shadow bg-white align-items-center mb-2'), css({width: 100, height: 100})]}>
-                <Text style={css('text center')}>
+            <View style={[css('shadow bg-white center mb-2'), css({width: 100, height: 100})]}>
+                <Text style={css('text')}>
                     {'shadow'}
                 </Text>
             </View>
-            <View style={[css('shadow-md bg-white align-items-center mb-2'), css({width: 100, height: 100})]}>
-                <Text style={css('text center')}>
+            <View style={[css('shadow-md bg-white center mb-2'), css({width: 100, height: 100})]}>
+                <Text style={css('text')}>
                     {'shadow-md'}
                 </Text>
             </View>
-            <View style={[css('shadow-lg bg-white align-items-center mb-2'), css({width: 100, height: 100})]}>
-                <Text style={css('text center')}>
+            <View style={[css('shadow-lg bg-white center mb-2'), css({width: 100, height: 100})]}>
+                <Text style={css('text')}>
                     {'shadow-lg'}
                 </Text>
             </View>
-            <View style={[css('shadow-none bg-light align-items-center mb-2'), css({width: 100, height: 100})]}>
-                <Text style={css('text center')}>
+            <View style={[css('shadow-none bg-light center mb-2'), css({width: 100, height: 100})]}>
+                <Text style={css('text')}>
                     {'shadow-none'}
                 </Text>
             </View>

@@ -53,9 +53,8 @@ export default function Forms() {
         </Text>
         <TextInput style={css(`input rounded-3 bg-white input-error`)}
                    numberOfLines={1}
-                   placeholder={'Type here...'}
-                   onFocus={() => setIsActive1(true)}
-                   onBlur={() => setIsActive1(false)}/>
+                   editable={false}
+                   placeholder={'Type here...'}/>
         <Text style={css('text text-danger')}>
             {'The error is still programing with StyleSheet.create()'}
         </Text>
