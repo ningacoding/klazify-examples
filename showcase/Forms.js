@@ -51,15 +51,19 @@ export default function Forms() {
             {'Input group:'}
         </Text>
         <View style={css('b-1 row center rounded-5 bg-panel')}>
-            <MaterialCommunityIcons name={'email-outline'}
-                                    style={css('icon text-gray bg-panel-50 p-1 rounded-l-5 br-1 mr-1')}/>
-            <TextInput style={css(`text rounded-3 flex pr-1`)}
+            <View style={css('bg-body rounded-l-5 br-1')}>
+                <MaterialCommunityIcons name={'email-outline'}
+                                        style={css('icon text-gray p-1')}/>
+            </View>
+            <TextInput style={css(`text rounded-3 flex px-1`)}
                        numberOfLines={1}
                        placeholderTextColor={color('$gray').hex()}
                        placeholder={'Type your email here...'}/>
-            <Text style={css('text text-gray bg-panel-50 p-1 rounded-r-5 bl-1')}>
-                {'@example.com'}
-            </Text>
+            <View style={css('bg-body rounded-r-5 bl-1')}>
+                <Text style={css('text text-gray p-1')}>
+                    {'@example.com'}
+                </Text>
+            </View>
         </View>
 
         <Text style={css('text pb-half mt-2')}>
@@ -109,8 +113,10 @@ export default function Forms() {
                         <MaterialCommunityIcons name={'check-circle'}
                                                 style={css('icon text-success')}/>
                     </View>
-                    <MaterialCommunityIcons name={'chevron-down'}
-                                            style={css('icon text-gray-3 rounded-r-5 p-1 bg-primary text-white')}/>
+                    <View style={css("rounded-r-5 p-1 bg-primary")}>
+                        <MaterialCommunityIcons name={'chevron-down'}
+                                                style={css('icon text-white')}/>
+                    </View>
                 </View>
             </Popover>
         </View>

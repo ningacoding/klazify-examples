@@ -7,74 +7,110 @@ export default function Grid() {
             {'Grid'}
         </Text>
         <View style={css('row')}>
-            <Text style={css('col text text-center b-1 p-1 bg-panel')}>
-                {'Column'}
-            </Text>
+            <View style={css('col b-1 bg-panel')}>
+                <Text style={css('text text-center p-1')}>
+                    {'Column'}
+                </Text>
+            </View>
         </View>
         <View style={css('row')}>
-            <Text style={css('col text text-center bb-1 bx-1 p-1 bg-panel')}>
-                {'Column'}
-            </Text>
-            <Text style={css('col text text-center bb-1 br-1 p-1 bg-panel')}>
-                {'Column'}
-            </Text>
+            <View style={css('col bb-1 bx-1 bg-panel')}>
+                <Text style={css('text text-center p-1')}>
+                    {'Column'}
+                </Text>
+            </View>
+            <View style={css('col bb-1 br-1 bg-panel')}>
+                <Text style={css('text text-center p-1')}>
+                    {'Column'}
+                </Text>
+            </View>
         </View>
         <View style={css('row')}>
-            <Text style={css('col text text-center bb-1 bx-1 p-1 bg-panel')}>
-                {'Column'}
-            </Text>
-            <Text style={css('col text text-center bb-1 br-1 p-1 bg-panel')}>
-                {'Column'}
-            </Text>
-            <Text style={css('col text text-center bb-1 br-1 p-1 bg-panel')}>
-                {'Column'}
-            </Text>
+            <View style={css('col bb-1 bx-1 bg-panel')}>
+                <Text style={css('text text-center p-1')}>
+                    {'Column'}
+                </Text>
+            </View>
+            <View style={css('col bb-1 br-1 bg-panel')}>
+                <Text style={css('text text-center p-1')}>
+                    {'Column'}
+                </Text>
+            </View>
+            <View style={css('col bb-1 br-1 bg-panel')}>
+                <Text style={css('text text-center p-1')}>
+                    {'Column'}
+                </Text>
+            </View>
         </View>
         <View style={css('row')}>
-            <Text style={css('col text text-center bb-1 bx-1 p-1 bg-panel')}>
-                {'Column'}
-            </Text>
-            <Text style={css('col text text-center bb-1 br-1 p-1 bg-panel')}>
-                {'Column'}
-            </Text>
-            <Text style={css('col text text-center bb-1 br-1 p-1 bg-panel')}>
-                {'Column'}
-            </Text>
-            <Text style={css('col text text-center bb-1 br-1 p-1 bg-panel')}>
-                {'Column'}
-            </Text>
+            <View style={css('col bb-1 bx-1 bg-panel')}>
+                <Text style={css('text text-center p-1')}>
+                    {'Column'}
+                </Text>
+            </View>
+            <View style={css('col bb-1 br-1 bg-panel')}>
+                <Text style={css('text text-center p-1')}>
+                    {'Column'}
+                </Text>
+            </View>
+            <View style={css('col bb-1 br-1 bg-panel')}>
+                <Text style={css('text text-center p-1')}>
+                    {'Column'}
+                </Text>
+            </View>
+            <View style={css('col bb-1 br-1 bg-panel')}>
+                <Text style={css('text text-center p-1')}>
+                    {'Column'}
+                </Text>
+            </View>
         </View>
         <View style={css('row')}>
-            <Text style={css('col-auto text text-center bb-1 bx-1 p-1 bg-panel')}>
-                {'Column that adjusts to it\'s content'}
-            </Text>
-            <Text style={css('col text text-center bb-1 br-1 p-1 bg-panel')}>
-                {'Column'}
-            </Text>
+            <View style={css('col-auto bb-1 bx-1 bg-panel')}>
+                <Text style={css('text text-center p-1')}>
+                    {'Column auto width (col-auto)'}
+                </Text>
+            </View>
+            <View style={css('col bb-1 br-1 bg-panel')}>
+                <Text style={css('text text-center p-1')}>
+                    {'Column'}
+                </Text>
+            </View>
         </View>
         <View style={css('row')}>
-            <Text style={css('col-1 text text-center bb-1 bx-1 p-1 bg-panel')}>
-                {'Column 1'}
-            </Text>
-            <Text style={css('col-3 text text-center bb-1 br-1 p-1 bg-panel')}>
-                {'Column 3'}
-            </Text>
+            <View style={css('col-1 bb-1 bx-1 bg-panel')}>
+                <Text style={css('text text-center p-1')}>
+                    {'Column 1'}
+                </Text>
+            </View>
+            <View style={css('col-3 bb-1 br-1 bg-panel')}>
+                <Text style={css('text text-center p-1')}>
+                    {'Column 3'}
+                </Text>
+            </View>
         </View>
         <View style={css('row')}>
-            <Text style={css('col-2 text text-center bb-1 bx-1 p-1 bg-panel')}>
-                {'Column 2'}
-            </Text>
-            <Text style={css('col-2 text text-center bb-1 br-1 p-1 bg-panel')}>
-                {'Column 2'}
-            </Text>
+            <View style={css('col-2 bb-1 bx-1 bg-panel')}>
+                <Text style={css('text text-center p-1')}>
+                    {'Column 2'}
+                </Text>
+            </View>
+            <View style={css('col-2 bb-1 br-1 bg-panel')}>
+                <Text style={css('text text-center p-1')}>
+                    {'Column 2'}
+                </Text>
+            </View>
         </View>
         <View style={css('row')}>
-            <Text style={css('col-3 text text-center bb-1 bx-1 p-1 bg-panel')}>
-                {'Column 3'}
-            </Text>
-            <Text style={css('col-1 text text-center bb-1 br-1 p-1 bg-panel')}>
-                {'Column 1'}
-            </Text>
+            <View style={css('col-3 bb-1 bx-1 bg-panel')}>
+                <Text style={css('text text-center p-1')}>
+                    {'Column 3'}
+                </Text>
+            </View>
+            <View style={css('col-1 bb-1 br-1 bg-panel')}>
+                <Text style={css('text text-center p-1')}>
+                    {'Column 1'}
+                </Text>
+            </View>
         </View>
 
         <Text style={css('h1')}>
