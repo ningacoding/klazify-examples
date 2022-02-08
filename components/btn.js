@@ -1,11 +1,15 @@
 import {css} from 'klazify';
-import {Text, TouchableOpacity} from 'react-native';
+import {Text, TouchableOpacity, View} from 'react-native';
+import {MaterialCommunityIcons} from '@expo/vector-icons';
 
-export default function Btn({onPress, style, label, light = false, textStyle}) {
-    return <TouchableOpacity style={[css('inline rounded-5'), style]}
-                             onPress={onPress}>
+export default function Btn({onPress, style, label, light = false, block, textStyle, iconRight, iconRightStyle}) {
+    const Container = !!onPress && typeof onPress === 'function' ? TouchableOpacity : View;
+    return <Container style={[css(`${block ? '' : 'inline'} rounded-5 center row`), style]}
+                      onPress={onPress}>
         <Text style={[css(`text ${!!light ? 'text-black' : 'text-white'}`), textStyle]}>
             {label}
         </Text>
-    </TouchableOpacity>;
+        {!!iconRight && <MaterialCommunityIcons name={iconRight}
+                                                style={[css("icon text-white pl-1 icon-md"), iconRightStyle]}/>}
+    </Container>;
 }

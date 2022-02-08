@@ -1,4 +1,4 @@
-import {Image, Text, TextInput, View} from 'react-native';
+import {Image, Text, TextInput, TouchableOpacity, View} from 'react-native';
 import {css, Popover} from 'klazify';
 import {useRef, useState} from 'react';
 import {MaterialCommunityIcons} from '@expo/vector-icons';
@@ -48,14 +48,14 @@ export default function Forms() {
         <Text style={css('text pb-half mt-2')}>
             {'Input group:'}
         </Text>
-        <View style={css("b-1 row center rounded-5")}>
+        <View style={css('b-1 row center rounded-5')}>
             <MaterialCommunityIcons name={'email-outline'}
-                                    style={css('icon text-gray-3 bg-light p-1 rounded-left-5 br-1 mr-1')}/>
+                                    style={css('icon text-gray-3 bg-light p-1 rounded-l-5 br-1 mr-1')}/>
             <TextInput style={css(`rounded-3 bg-white flex pr-1`)}
                        numberOfLines={1}
                        placeholder={'Type your email here...'}/>
-            <Text style={css("bg-light p-1 rounded-right-5 bl-1")}>
-                {"@example.com"}
+            <Text style={css('text text-gray-4 bg-light p-1 rounded-r-5 bl-1')}>
+                {'@example.com'}
             </Text>
         </View>
 
@@ -78,8 +78,8 @@ export default function Forms() {
                      content={<PopoverStaticOptions onPress={closePopover}/>}>
                 <View style={css('row b-1 rounded-3 center')}>
                     <View style={css('flex row p-1')}>
-                        <Text style={css('text')}>
-                            México
+                        <Text style={css('text text-gray-4')}>
+                            Please select an item...
                         </Text>
                     </View>
                     <MaterialCommunityIcons name={'chevron-down'}
@@ -106,9 +106,36 @@ export default function Forms() {
                                                 style={css('icon text-success')}/>
                     </View>
                     <MaterialCommunityIcons name={'chevron-down'}
-                                            style={css('icon text-gray-3 rounded-right-5 p-1 bg-primary text-white')}/>
+                                            style={css('icon text-gray-3 rounded-r-5 p-1 bg-primary text-white')}/>
                 </View>
             </Popover>
+        </View>
+
+
+        <View style={css('mt-2')}>
+            <Text style={css('text mb-half')}>
+                Button Group:
+            </Text>
+            <View style={css('row')}>
+                <TouchableOpacity onPress={() => alert('You chosen the best deal')}
+                                  style={css('bg-primary p-1 rounded-l-5 flex center')}>
+                    <Text style={css('text text-white')}>
+                        {'Klazify'}
+                    </Text>
+                </TouchableOpacity>
+                <TouchableOpacity onPress={() => alert('pressed')}
+                                  style={css('by-1 b-primary p-1 flex center')}>
+                    <Text style={css('text text-primary')}>
+                        {'Option 2'}
+                    </Text>
+                </TouchableOpacity>
+                <TouchableOpacity onPress={() => alert('pressed')}
+                                  style={css('bx-1 by-1 b-primary p-1 rounded-r-5 flex center')}>
+                    <Text style={css('text text-primary')}>
+                        {'Option 3'}
+                    </Text>
+                </TouchableOpacity>
+            </View>
         </View>
 
     </View>;

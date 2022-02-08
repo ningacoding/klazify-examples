@@ -69,8 +69,9 @@ export default function App() {
       </Text>
       
       <View style={css('row center mt-1 alert-warning p-1 rounded-3')}>
-        <MaterialCommunityIcons name={'alert'} style={css('icon icon-md text-warning center mr-1')}/>
-        <Text style={css('flex alert-text-warning center')}>
+        <MaterialCommunityIcons name={'alert'}
+                                style={css('icon icon-md text-warning center mr-1')}/>
+        <Text style={css('flex text text-alert-warning center')}>
           {'Klazify is NOT a component library, you can build the below example components just by combining, creating or overriding built-in classes.'}
         </Text>
       </View>

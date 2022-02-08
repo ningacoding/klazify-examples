@@ -1,8 +1,19 @@
 import {Text, View} from 'react-native';
-import {css} from 'klazify';
+import {css, Popover} from 'klazify';
 import Btn from '../components/btn';
+import {useRef} from 'react';
+import PopoverStaticOptions from '../components/popover.static.options';
 
 export default function Buttons() {
+
+    const popoverRef = useRef(null);
+
+    const closePopover = () => {
+        if (popoverRef?.current) {
+            popoverRef.current.toggleMenu(false);
+        }
+    }
+
     return <View>
         <Text style={css('h1')}>
             {'Buttons'}
@@ -202,6 +213,35 @@ export default function Buttons() {
                  textStyle={css('text-black')}
                  label={'Black'}
                  onPress={() => alert('black')}/>
+        </View>
+        <Text style={css('h3')}>
+            {'Buttons Extra'}
+        </Text>
+        <View style={css('flex')}>
+            <Btn style={css('mr-1 mb-1 btn-padding')}
+                 textStyle={css('link')}
+                 label={'Link'}
+                 onPress={() => alert('link')}/>
+            <Btn style={css('mr-1 mb-1 btn-primary btn-sm')}
+                 textStyle={css('text text-white')}
+                 label={'Button Small'}
+                 onPress={() => alert('btn-sm')}/>
+            <Popover ref={popoverRef}
+                     inline
+                     content={<PopoverStaticOptions onPress={closePopover}/>}>
+                <Btn style={css('mb-1 btn-primary')}
+                     iconRight={'menu-down'}
+                     label={'Button with Menu'}/>
+            </Popover>
+            <Btn style={css('mr-1 mb-1 btn-primary btn-lg')}
+                 textStyle={css('text-md text-white text-bold')}
+                 label={'Button Large'}
+                 onPress={() => alert('btn-lg')}/>
+            <Btn style={css('mr-1 mb-1 flex btn-primary')}
+                 block
+                 textStyle={css('text-white')}
+                 label={'BLOCK'}
+                 onPress={() => alert('pressed')}/>
         </View>
     </View>;
 }
