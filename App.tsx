@@ -5,7 +5,7 @@ import {ScrollView, Text, View} from 'react-native';
  * You can use init() method directly,
  * we are adding an alias as example, you can use it when another init() method conflicts with Klazify init method.
  */
-import {css, init as klazify} from 'klazify';
+import {color, css, init as klazify} from 'klazify';
 import {PressStart2P_400Regular} from '@expo-google-fonts/press-start-2p';
 import {Roboto_400Regular, useFonts} from '@expo-google-fonts/roboto';
 import AppLoading from 'expo-app-loading';
@@ -41,8 +41,8 @@ export default function App() {
     },
     customClasses: () => {
       return {
-        'custom-class': {
-          backgroundColor: '$blue-custom',
+        'primary-lighten-50': {
+          backgroundColor: color("$primary").lighten(50).hex(),
         },
         'custom-font': {
           fontFamily: 'PressStart2P_400Regular',
