@@ -19,6 +19,7 @@ import {MaterialCommunityIcons} from '@expo/vector-icons';
 import Alerts from './showcase/Alerts';
 import Forms from './showcase/Forms';
 import PopoverExample from './showcase/Popover';
+import Tabs from './showcase/Tabs';
 
 export default function App() {
   
@@ -42,10 +43,20 @@ export default function App() {
     customClasses: () => {
       return {
         'primary-lighten-50': {
-          backgroundColor: color("$primary").lighten(50).hex(),
+          backgroundColor: color('$primary').lighten(50).hex(),
         },
         'custom-font': {
           fontFamily: 'PressStart2P_400Regular',
+        },
+        'tab': {
+          marginBottom: -1,
+        },
+        'tab-active': {
+          marginBottom: -1,
+        },
+        'tab-inactive': {
+          marginTop: -1,
+          borderBottomWidth: 1,
         },
       };
     },
@@ -79,6 +90,7 @@ export default function App() {
       <Buttons/>
       <Texts/>
       <Grid/>
+      <Tabs/>
       <PopoverExample/>
       <Forms/>
       <Utilities/>

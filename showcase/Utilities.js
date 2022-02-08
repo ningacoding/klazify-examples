@@ -2,6 +2,7 @@ import {Text, View} from 'react-native';
 import {css} from 'klazify';
 import Separator from '../components/separator';
 import Progress from '../components/progress';
+import Btn from '../components/btn';
 
 export default function Utilities() {
     return <View style={css('')}>
@@ -49,6 +50,15 @@ export default function Utilities() {
             {'Separator 👇'}
         </Text>
         <Separator/>
+
+        <Text style={css('text h3 mt-1')}>
+            {'Disable anything visually'}
+        </Text>
+        <Text style={css('text mb-1')}>
+            {'Just add "disabled" class to any element.'}
+        </Text>
+
+        <Btn style={css('btn-primary disabled')} label={'Disabled'}/>
 
         <Text style={css('text h3 mt-1')}>
             {'Progress Bar'}
