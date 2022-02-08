@@ -9,27 +9,27 @@ export default function Shadows() {
 
         <View style={css('row flex-wrap justify-content-between')}>
 
-            <View style={[css('shadow-sm bg-white center mb-2'), css({width: 100, height: 100})]}>
+            <View style={[css('shadow-sm bg-panel center mb-2'), css({width: 100, height: 100})]}>
                 <Text style={css('text')}>
                     {'shadow-sm'}
                 </Text>
             </View>
-            <View style={[css('shadow bg-white center mb-2'), css({width: 100, height: 100})]}>
+            <View style={[css('shadow bg-panel center mb-2'), css({width: 100, height: 100})]}>
                 <Text style={css('text')}>
                     {'shadow'}
                 </Text>
             </View>
-            <View style={[css('shadow-md bg-white center mb-2'), css({width: 100, height: 100})]}>
+            <View style={[css('shadow-md bg-panel center mb-2'), css({width: 100, height: 100})]}>
                 <Text style={css('text')}>
                     {'shadow-md'}
                 </Text>
             </View>
-            <View style={[css('shadow-lg bg-white center mb-2'), css({width: 100, height: 100})]}>
+            <View style={[css('shadow-lg bg-panel center mb-2'), css({width: 100, height: 100})]}>
                 <Text style={css('text')}>
                     {'shadow-lg'}
                 </Text>
             </View>
-            <View style={[css('shadow-none bg-light center mb-2'), css({width: 100, height: 100})]}>
+            <View style={[css('shadow-none bg-panel center mb-2'), css({width: 100, height: 100})]}>
                 <Text style={css('text')}>
                     {'shadow-none'}
                 </Text>

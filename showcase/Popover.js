@@ -27,11 +27,11 @@ export default function PopoverExample() {
                      </Text>
                      <Image source={{uri: 'https://picsum.photos/319/180'}}
                             style={css('img-16-9')}/>
-                     <Btn style={css('btn-outline-primary align-self-end mt-1')}
-                          textStyle={css('text text-primary')}
+                     <Btn style={css('btn-primary align-self-end mt-1')}
+                          textStyle={css('text text-white')}
                           onPress={closePopover}
                           iconRight={'close'}
-                          iconRightStyle={css('text-primary')}
+                          iconRightStyle={css('text-white')}
                           label={'CLOSE'}/>
                  </View>}>
             <Btn style={css('btn-primary')}

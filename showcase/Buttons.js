@@ -89,10 +89,12 @@ export default function Buttons() {
                  label={'Danger'}
                  onPress={() => alert('danger')}/>
             <Btn style={css('mr-1 mb-1 btn-white')}
-                 label={'White'} light
+                 label={'White'}
+                 light
                  onPress={() => alert('white')}/>
             <Btn style={css('mr-1 mb-1 btn-light')}
-                 label={'Light'} light
+                 label={'Light'}
+                 light
                  onPress={() => alert('light')}/>
             <Btn style={css('mr-1 mb-1 btn-dark')}
                  label={'Dark'}
@@ -231,15 +233,16 @@ export default function Buttons() {
                      content={<PopoverStaticOptions onPress={closePopover}/>}>
                 <Btn style={css('mb-1 btn-primary')}
                      iconRight={'menu-down'}
+                     iconRightStyle={css('text-white')}
                      label={'Button with Menu'}/>
             </Popover>
             <Btn style={css('mr-1 mb-1 btn-primary btn-lg')}
-                 textStyle={css('text-md text-white text-bold')}
+                 textStyle={css('text text-white text-md text-bold')}
                  label={'Button Large'}
                  onPress={() => alert('btn-lg')}/>
             <Btn style={css('mr-1 mb-1 flex btn-primary')}
                  block
-                 textStyle={css('text-white')}
+                 textStyle={css('text text-white')}
                  label={'BLOCK'}
                  onPress={() => alert('pressed')}/>
         </View>

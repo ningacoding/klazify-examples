@@ -9,10 +9,10 @@ export default function Cards() {
             {'Cards'}
         </Text>
 
-        <View style={css("px-1")}>
+        <View style={css('px-1')}>
 
             <View style={css('card mb-2')}>
-                <Text style={css('text-md text-bold p-1')}>
+                <Text style={css('text text-md text-bold p-1')}>
                     {'Card title'}
                 </Text>
                 <Separator/>
@@ -22,14 +22,15 @@ export default function Cards() {
                     {'This is a dummy text.'}
                 </Text>
                 <Separator/>
-                <Btn style={css('m-1 btn-light align-self-end')}
+                <Btn style={css('m-1 btn-primary align-self-end')}
+                     textStyle={css('text-white')}
                      label={'VIEW MORE'}
                      light
                      onPress={() => alert('clicked')}/>
             </View>
 
-            <View style={css('b-1 rounded-5 mb-2 bg-white')}>
-                <Text style={css('text-md text-bold p-1')}>
+            <View style={css('b-1 rounded-5 mb-2 bg-panel')}>
+                <Text style={css('text text-md text-bold p-1')}>
                     {'Card bordered'}
                 </Text>
                 <Separator/>
@@ -40,6 +41,7 @@ export default function Cards() {
                 </Text>
                 <Separator/>
                 <Btn style={css('m-1 btn-outline-gray-2 align-self-end')}
+                     textStyle={css('text')}
                      label={'VIEW MORE'}
                      light
                      onPress={() => alert('clicked')}/>

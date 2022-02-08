@@ -125,8 +125,8 @@ export default function Alerts() {
 
         <View style={css('row center mt-1 alert-gray-dark p-1 rounded-3')}>
             <MaterialCommunityIcons name={'alert'}
-                                    style={css('icon icon-md text-white center mr-1')}/>
-            <Text style={css('flex text-white center')}>
+                                    style={css('icon icon-md text-light center mr-1')}/>
+            <Text style={css('flex text-light center')}>
                 {'A simple gray-dark alert—check it out!'}
             </Text>
         </View>
@@ -181,15 +181,15 @@ export default function Alerts() {
 
         <View style={css('row center mt-1 alert-dark p-1 rounded-3')}>
             <MaterialCommunityIcons name={'alert'}
-                                    style={css('icon icon-md text-white center mr-1')}/>
-            <Text style={css('flex text-white center')}>
+                                    style={css('icon icon-md text-light center mr-1')}/>
+            <Text style={css('flex text-light center')}>
                 {'A simple dark alert—check it out!'}
             </Text>
         </View>
 
         <View style={css('row center mt-1 alert-black p-1 rounded-3')}>
             <MaterialCommunityIcons name={'alert'}
-                                    style={css('icon icon-md text-white center mr-1')}/>
+                                    style={css('icon icon-md text-light center mr-1')}/>
             <Text style={css('flex text-alert-black center')}>
                 {'A simple black alert—check it out!'}
             </Text>

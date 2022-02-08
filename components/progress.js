@@ -5,7 +5,7 @@ export default function Progress({progress = 0, style, progressStyle, removeLabe
     return <View style={[css(`bg-gray-1 rounded-5 ${progress === 0 ? 'p-1' : ''}`), style]}>
         {progress > 0 && <Text style={[
             css({width: progress + '%'}),
-            css(`bg-primary ${progress === 100 ? 'rounded-5' : 'rounded-l-5'} text text-sm text-white text-bold p-half text-align-center flex`),
+            css(`bg-primary ${progress === 100 ? 'rounded-5' : 'rounded-l-5'} text text-sm text-bold p-half text-align-center flex`),
             progressStyle,
         ]}>
             {progress > 9.9999 && !removeLabel ? progress + '%' : ''}

@@ -1,5 +1,5 @@
 import {Image, Text, TextInput, TouchableOpacity, View} from 'react-native';
-import {css, Popover} from 'klazify';
+import {color, css, Popover} from 'klazify';
 import {useRef, useState} from 'react';
 import {MaterialCommunityIcons} from '@expo/vector-icons';
 import PopoverStaticOptions from '../components/popover.static.options';
@@ -30,31 +30,34 @@ export default function Forms() {
         <Text style={css('text pb-half')}>
             {'What is your favorite food?'}
         </Text>
-        <TextInput style={css(`input rounded-3 bg-white ${isActive1 ? 'input-active' : ''}`)}
+        <TextInput style={css(`input text rounded-3 bg-panel ${isActive1 ? 'input-active' : ''}`)}
                    numberOfLines={1}
                    placeholder={'Type here...'}
+                   placeholderTextColor={color("$text").darken(0.5).hex()}
                    onFocus={() => setIsActive1(true)}
                    onBlur={() => setIsActive1(false)}/>
 
         <Text style={css('text pb-half mt-2')}>
             {'Tell us what do you think:'}
         </Text>
-        <TextInput style={css(`text-area rounded-3 bg-white ${isActive2 ? 'input-active' : ''}`)}
+        <TextInput style={css(`text-area text rounded-3 bg-panel ${isActive2 ? 'input-active' : ''}`)}
                    multiline
                    placeholder={'Type here...'}
+                   placeholderTextColor={color("$text").darken(0.5).hex()}
                    onFocus={() => setIsActive2(true)}
                    onBlur={() => setIsActive2(false)}/>
 
         <Text style={css('text pb-half mt-2')}>
             {'Input group:'}
         </Text>
-        <View style={css('b-1 row center rounded-5')}>
+        <View style={css('b-1 row center rounded-5 bg-panel')}>
             <MaterialCommunityIcons name={'email-outline'}
-                                    style={css('icon text-gray-3 bg-light p-1 rounded-l-5 br-1 mr-1')}/>
-            <TextInput style={css(`rounded-3 bg-white flex pr-1`)}
+                                    style={css('icon text-gray bg-panel-50 p-1 rounded-l-5 br-1 mr-1')}/>
+            <TextInput style={css(`text rounded-3 flex pr-1`)}
                        numberOfLines={1}
+                       placeholderTextColor={color("$text").darken(0.5).hex()}
                        placeholder={'Type your email here...'}/>
-            <Text style={css('text text-gray-4 bg-light p-1 rounded-r-5 bl-1')}>
+            <Text style={css('text text-gray bg-panel-50 p-1 rounded-r-5 bl-1')}>
                 {'@example.com'}
             </Text>
         </View>
@@ -62,10 +65,11 @@ export default function Forms() {
         <Text style={css('text pb-half mt-2')}>
             {'Just showing errors example'}
         </Text>
-        <TextInput style={css(`input rounded-3 bg-white input-error`)}
+        <TextInput style={css(`input text rounded-3 bg-panel input-error`)}
                    numberOfLines={1}
                    editable={false}
-                   placeholder={'Type here...'}/>
+                   placeholder={'Type here...'}
+                   placeholderTextColor={color("$text").darken(0.5).hex()}/>
         <Text style={css('text text-danger')}>
             {'The error is still programing with StyleSheet.create()'}
         </Text>
@@ -116,7 +120,7 @@ export default function Forms() {
             <Text style={css('text mb-half')}>
                 {"Button Group:"}
             </Text>
-            <View style={css('row')}>
+            <View style={css('row rounded-5 bg-panel')}>
                 <TouchableOpacity onPress={() => alert('You chosen the best deal')}
                                   style={css('bg-primary p-1 rounded-l-5 flex center')}>
                     <Text style={css('text text-white')}>
@@ -125,13 +129,13 @@ export default function Forms() {
                 </TouchableOpacity>
                 <TouchableOpacity onPress={() => alert('pressed')}
                                   style={css('by-1 b-primary p-1 flex center')}>
-                    <Text style={css('text text-primary')}>
+                    <Text style={css('text')}>
                         {'Option 2'}
                     </Text>
                 </TouchableOpacity>
                 <TouchableOpacity onPress={() => alert('pressed')}
                                   style={css('bx-1 by-1 b-primary p-1 rounded-r-5 flex center')}>
-                    <Text style={css('text text-primary')}>
+                    <Text style={css('text')}>
                         {'Option 3'}
                     </Text>
                 </TouchableOpacity>

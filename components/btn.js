@@ -10,6 +10,6 @@ export default function Btn({onPress, style, label, light = false, block, textSt
             {label}
         </Text>
         {!!iconRight && <MaterialCommunityIcons name={iconRight}
-                                                style={[css("icon text-white pl-1 icon-md"), iconRightStyle]}/>}
+                                                style={[css("icon text-light pl-1 icon-md"), iconRightStyle]}/>}
     </Container>;
 }

@@ -1,25 +1,30 @@
-import {StatusBar} from 'expo-status-bar';
+import {useEffect, useState} from 'react';
 import {ScrollView, Text, View} from 'react-native';
-
 /**
  * You can use init() method directly,
  * we are adding an alias as example, you can use an alias when another init() method conflicts with Klazify init method.
  */
-import {color, css, init as klazify} from 'klazify';
+import {css, init as klazify} from 'klazify';
+
+import {StatusBar} from 'expo-status-bar';
+import AppLoading from 'expo-app-loading';
 import {PressStart2P_400Regular} from '@expo-google-fonts/press-start-2p';
 import {Roboto_400Regular, useFonts} from '@expo-google-fonts/roboto';
-import AppLoading from 'expo-app-loading';
+import {MaterialCommunityIcons} from '@expo/vector-icons';
 import Buttons from './showcase/Buttons';
 import Texts from './showcase/Texts';
 import Grid from './showcase/Grid';
 import Utilities from './showcase/Utilities';
 import Cards from './showcase/Cards';
 import Shadows from './showcase/Shadows';
-import {MaterialCommunityIcons} from '@expo/vector-icons';
 import Alerts from './showcase/Alerts';
 import Forms from './showcase/Forms';
 import PopoverExample from './showcase/Popover';
 import Tabs from './showcase/Tabs';
+import Themes from './showcase/Themes';
+import defaultTheme from './default.theme';
+
+klazify(defaultTheme);
 
 export default function App() {
   
@@ -28,42 +33,18 @@ export default function App() {
     Roboto_400Regular,
   });
   
-  if (!fontsLoaded) {
+  const [isRender, setIsRender] = useState(true);
+  
+  useEffect(() => {
+    setIsRender(true);
+  }, [isRender]);
+  
+  if (!fontsLoaded || !isRender) {
     return <AppLoading/>;
   }
   
-  klazify({
-    theme: {
-      defaultFontFamily: 'Roboto_400Regular',
-    },
-    extraGlobalVars: {
-      '$rem': 12,
-      '$blue-custom': '#37a1e3',
-    },
-    customClasses: () => {
-      return {
-        'primary-lighten-50': {
-          backgroundColor: color('$primary').lighten(50).hex(),
-        },
-        'custom-font': {
-          fontFamily: 'PressStart2P_400Regular',
-        },
-        'tab': {
-          marginBottom: -1,
-        },
-        'tab-active': {
-          marginBottom: -1,
-        },
-        'tab-inactive': {
-          marginTop: -1,
-          borderBottomWidth: 1,
-        },
-      };
-    },
-  });
-  
   return (
-    <ScrollView style={css('flex')}
+    <ScrollView style={css('flex bg-body')}
                 contentContainerStyle={css('flex-grow p-1 pt-2')}>
       <StatusBar style="auto"/>
       <Text style={css('text h3')}>
@@ -87,6 +68,7 @@ export default function App() {
         </Text>
       </View>
       
+      <Themes onChange={() => setIsRender(false)}/>
       <Buttons/>
       <Texts/>
       <Grid/>

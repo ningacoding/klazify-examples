@@ -10,17 +10,17 @@ export default function Tabs() {
         </Text>
 
         <View style={css('bb-1 row')}>
-            <Text style={css('rounded-t-3 bx-1 bt-1 p-1 tab tab-active bg-white mx-half')}>
+            <Text style={css('rounded-t-3 bx-1 bt-1 p-1 tab tab-active bg-panel mx-half text')}>
                 {'Active'}
             </Text>
-            <Text style={css('rounded-t-3 bx-1 bt-1 p-1 tab tab-inactive bg-light mx-half text-gray-4')}>
+            <Text style={css('rounded-t-3 bx-1 bt-1 p-1 tab tab-inactive bg-panel-50 mx-half text-gray-4 text')}>
                 {'Tab Inactive'}
             </Text>
-            <Text style={css('rounded-t-3 bx-1 bt-1 p-1 tab tab-inactive bg-light mx-half text-gray-4 disabled')}>
+            <Text style={css('rounded-t-3 bx-1 bt-1 p-1 tab tab-inactive bg-panel-50 mx-half text-gray-4 text disabled')}>
                 {'Disabled'}
             </Text>
-            <View style={css('rounded-t-3 bx-1 bt-1 p-1 tab tab-inactive bg-light mx-half')}>
-                <MaterialCommunityIcons name={'plus'} style={css('icon text-gray-4')}/>
+            <View style={css('rounded-t-3 bx-1 bt-1 p-1 tab tab-inactive bg-panel-50 mx-half text')}>
+                <MaterialCommunityIcons name={'plus'} style={css('icon text-gray-3')}/>
             </View>
         </View>
 
