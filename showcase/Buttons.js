@@ -18,7 +18,7 @@ export default function Buttons() {
         <Text style={css('h1')}>
             {'Buttons'}
         </Text>
-        <View style={css('flex-wrap row')}>
+        <View style={css('flex-wrap row bg-panel pt-1 px-1 rounded-5')}>
             <Btn style={css('mr-1 mb-1 btn-blue')}
                  label={'Blue'}
                  onPress={() => alert('blue')}/>
@@ -106,7 +106,7 @@ export default function Buttons() {
         <Text style={css('h1')}>
             {'Buttons Outline'}
         </Text>
-        <View style={css('flex-wrap row')}>
+        <View style={css('flex-wrap row bg-panel pt-1 px-1 rounded-5')}>
             <Btn style={css('mr-1 mb-1 btn-outline-blue')}
                  textStyle={css('text-blue')}
                  label={'Blue'}
@@ -219,7 +219,7 @@ export default function Buttons() {
         <Text style={css('h3')}>
             {'Buttons Extra'}
         </Text>
-        <View style={css('flex')}>
+        <View style={css('flex bg-panel pt-1 px-1 rounded-5')}>
             <Btn style={css('mr-1 mb-1 btn-padding')}
                  textStyle={css('link')}
                  label={'Link'}

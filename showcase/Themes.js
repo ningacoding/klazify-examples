@@ -17,7 +17,7 @@ export default function Themes({onChange}) {
         <Text style={css('h1')}>
             {'Theming'}
         </Text>
-        <View style={css('p-1 bg-panel')}>
+        <View style={css('p-1 bg-panel rounded-5')}>
             <Text style={css('text')}>
                 {'By default, Klazify has a theme with predefined colors, but you can create your own theme, we added a Dark theme example for learn purposes.'}
             </Text>
