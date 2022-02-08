@@ -1,28 +1,25 @@
-import {Image, Text, TextInput, TouchableOpacity, View} from 'react-native';
-import {css} from 'klazify';
+import {Image, Text, TextInput, View} from 'react-native';
+import {css, Popover} from 'klazify';
 import {useRef, useState} from 'react';
 import {MaterialCommunityIcons} from '@expo/vector-icons';
-import {Menu} from 'react-native-material-menu';
+import PopoverStaticOptions from '../components/popover.static.options';
 
 export default function Forms() {
 
-    const menuRef = useRef(null);
     const [isActive1, setIsActive1] = useState(false);
     const [isActive2, setIsActive2] = useState(false);
-    const [buttonWidth, setButtonWidth] = useState(undefined);
 
-    const onButtonLayout = ({nativeEvent}) => setButtonWidth(nativeEvent.layout.width);
+    const popoverRef = useRef(null);
+    const popoverRef2 = useRef(null);
 
-    const toggleMenu = (show) => {
-        const currentMenuRef = menuRef.current;
-        if (!!currentMenuRef) {
-            if (!!show) {
-                currentMenuRef.show();
-            } else {
-                currentMenuRef.hide();
-            }
+    const closePopover = () => {
+        if (popoverRef2?.current) {
+            popoverRef2.current.toggleMenu(false);
         }
-    };
+        if (popoverRef?.current) {
+            popoverRef.current.toggleMenu(false);
+        }
+    }
 
     return <View style={css('')}>
 
@@ -49,6 +46,20 @@ export default function Forms() {
                    onBlur={() => setIsActive2(false)}/>
 
         <Text style={css('text pb-half mt-2')}>
+            {'Input group:'}
+        </Text>
+        <View style={css("b-1 row center rounded-5")}>
+            <MaterialCommunityIcons name={'email-outline'}
+                                    style={css('icon text-gray-3 bg-light p-1 rounded-left-5 br-1 mr-1')}/>
+            <TextInput style={css(`rounded-3 bg-white flex pr-1`)}
+                       numberOfLines={1}
+                       placeholder={'Type your email here...'}/>
+            <Text style={css("bg-light p-1 rounded-right-5 bl-1")}>
+                {"@example.com"}
+            </Text>
+        </View>
+
+        <Text style={css('text pb-half mt-2')}>
             {'Just showing errors example'}
         </Text>
         <TextInput style={css(`input rounded-3 bg-white input-error`)}
@@ -63,79 +74,41 @@ export default function Forms() {
             <Text style={css('text mb-half')}>
                 Styling a Dropdown:
             </Text>
-            <View style={css('row b-1 rounded-3 center')}>
-                <View style={css('flex row p-1')}>
-                    <Text style={css('text')}>
-                        México
-                    </Text>
+            <Popover ref={popoverRef}
+                     content={<PopoverStaticOptions onPress={closePopover}/>}>
+                <View style={css('row b-1 rounded-3 center')}>
+                    <View style={css('flex row p-1')}>
+                        <Text style={css('text')}>
+                            México
+                        </Text>
+                    </View>
+                    <MaterialCommunityIcons name={'chevron-down'}
+                                            style={css('icon text-gray-3 p-1')}/>
                 </View>
-                <MaterialCommunityIcons name={'chevron-down'}
-                                        style={css('icon text-gray-3 p-1')}/>
-            </View>
+            </Popover>
+
         </View>
 
-        <View style={css('mt-2')}
-              onLayout={onButtonLayout}>
-
+        <View style={css('mt-2')}>
             <Text style={css('text mb-half')}>
                 Your imagination is the limit:
             </Text>
-
-            <TouchableOpacity style={css('row b-1 rounded-5 center')}
-                              onPress={() => toggleMenu(true)}>
-                <View style={css('flex row px-1 center')}>
-                    <Image style={css('img rounded w-2')}
-                           source={{uri: 'https://ui-avatars.com/api/?background=0d6efd&color=fff&name=Klazify'}}/>
-                    <Text style={css('text mx-1 flex')}>
-                        Klazify
-                    </Text>
-                    <MaterialCommunityIcons name={'check-circle'}
-                                            style={css('icon text-success')}/>
-                </View>
-                <MaterialCommunityIcons name={'chevron-down'}
-                                        style={css('icon text-gray-3 rounded-right-5 p-1 bg-primary text-white')}/>
-            </TouchableOpacity>
-
-            {/*Dropdown options menu*/}
-            <View style={css('position-absolute bottom-0 left-0')}>
-                <Menu ref={menuRef}
-                      style={[css('rounded-5'), css({width: buttonWidth})]}>
-                    <View>
-                        <TouchableOpacity style={css('row center p-1')}
-                                          onPress={() => toggleMenu()}>
-                            <MaterialCommunityIcons name={'checkbox-blank-circle-outline'}
-                                                    style={css('icon text-primary mr-1')}/>
-                            <Text style={css('text flex')}>
-                                {'Option 1'}
-                            </Text>
-                        </TouchableOpacity>
-                        <TouchableOpacity style={css('row center p-1')}
-                                          onPress={() => toggleMenu()}>
-                            <MaterialCommunityIcons name={'checkbox-blank-circle-outline'}
-                                                    style={css('icon text-primary mr-1')}/>
-                            <Text style={css('text flex')}>
-                                {'Option 2'}
-                            </Text>
-                        </TouchableOpacity>
-                        <TouchableOpacity style={css('row center p-1')}
-                                          onPress={() => toggleMenu()}>
-                            <MaterialCommunityIcons name={'checkbox-blank-circle'}
-                                                    style={css('icon text-primary mr-1')}/>
-                            <Text style={css('text flex')}>
-                                {'Klazify'}
-                            </Text>
-                        </TouchableOpacity>
-                        <TouchableOpacity style={css('row center p-1')}
-                                          onPress={() => toggleMenu()}>
-                            <MaterialCommunityIcons name={'checkbox-blank-circle-outline'}
-                                                    style={css('icon text-primary mr-1')}/>
-                            <Text style={css('text flex')}>
-                                {'Option 4'}
-                            </Text>
-                        </TouchableOpacity>
+            <Popover ref={popoverRef2}
+                     content={<PopoverStaticOptions onPress={closePopover}/>}>
+                <View style={css('row b-1 rounded-5 center')}>
+                    <View style={css('flex row px-1 center')}>
+                        <Image style={css('img rounded w-2')}
+                               source={{uri: 'https://ui-avatars.com/api/?background=0d6efd&color=fff&name=Klazify'}}/>
+                        <Text style={css('text mx-1 flex')}>
+                            Klazify
+                        </Text>
+                        <MaterialCommunityIcons name={'check-circle'}
+                                                style={css('icon text-success')}/>
                     </View>
-                </Menu>
-            </View>
+                    <MaterialCommunityIcons name={'chevron-down'}
+                                            style={css('icon text-gray-3 rounded-right-5 p-1 bg-primary text-white')}/>
+                </View>
+            </Popover>
         </View>
 
     </View>;
