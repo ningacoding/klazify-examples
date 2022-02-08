@@ -3,7 +3,7 @@ import {ScrollView, Text, View} from 'react-native';
 
 /**
  * You can use init() method directly,
- * we are adding an alias as example, you can use it when another init() method conflicts with Klazify init method.
+ * we are adding an alias as example, you can use an alias when another init() method conflicts with Klazify init method.
  */
 import {color, css, init as klazify} from 'klazify';
 import {PressStart2P_400Regular} from '@expo-google-fonts/press-start-2p';
