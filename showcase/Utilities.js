@@ -1,6 +1,7 @@
 import {Text, View} from 'react-native';
 import {css} from 'klazify';
 import Separator from '../components/separator';
+import Progress from '../components/progress';
 
 export default function Utilities() {
     return <View style={css('')}>
@@ -48,6 +49,16 @@ export default function Utilities() {
             {'Separator 👇'}
         </Text>
         <Separator/>
+
+        <Text style={css('text h3 mt-1')}>
+            {'Progress Bar'}
+        </Text>
+
+        <Progress progress={0}/>
+        <Progress progress={25} style={css('mt-1')} progressStyle={css('bg-danger')}/>
+        <Progress progress={45} style={css('mt-1')} progressStyle={css('bg-warning')} removeLabel/>
+        <Progress progress={65} style={css('mt-1')}/>
+        <Progress progress={100} style={css('mt-1')} progressStyle={css('bg-success')}/>
 
         <Text style={css('text h3')}>
             {'Backgrounds'}

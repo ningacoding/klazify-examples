@@ -72,14 +72,14 @@ export default function Forms() {
 
         <View style={css('mt-2')}>
             <Text style={css('text mb-half')}>
-                Styling a Dropdown:
+                {"Styling a Dropdown:"}
             </Text>
             <Popover ref={popoverRef}
                      content={<PopoverStaticOptions onPress={closePopover}/>}>
                 <View style={css('row b-1 rounded-3 center')}>
                     <View style={css('flex row p-1')}>
                         <Text style={css('text text-gray-4')}>
-                            Please select an item...
+                            {"Please select an item..."}
                         </Text>
                     </View>
                     <MaterialCommunityIcons name={'chevron-down'}
@@ -91,7 +91,7 @@ export default function Forms() {
 
         <View style={css('mt-2')}>
             <Text style={css('text mb-half')}>
-                Your imagination is the limit:
+                {"Your imagination is the limit:"}
             </Text>
             <Popover ref={popoverRef2}
                      content={<PopoverStaticOptions onPress={closePopover}/>}>
@@ -100,7 +100,7 @@ export default function Forms() {
                         <Image style={css('img rounded w-2')}
                                source={{uri: 'https://ui-avatars.com/api/?background=0d6efd&color=fff&name=Klazify'}}/>
                         <Text style={css('text mx-1 flex')}>
-                            Klazify
+                            {"Klazify"}
                         </Text>
                         <MaterialCommunityIcons name={'check-circle'}
                                                 style={css('icon text-success')}/>
@@ -114,7 +114,7 @@ export default function Forms() {
 
         <View style={css('mt-2')}>
             <Text style={css('text mb-half')}>
-                Button Group:
+                {"Button Group:"}
             </Text>
             <View style={css('row')}>
                 <TouchableOpacity onPress={() => alert('You chosen the best deal')}

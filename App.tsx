@@ -18,6 +18,7 @@ import Shadows from './showcase/Shadows';
 import {MaterialCommunityIcons} from '@expo/vector-icons';
 import Alerts from './showcase/Alerts';
 import Forms from './showcase/Forms';
+import PopoverExample from './showcase/Popover';
 
 export default function App() {
   
@@ -46,7 +47,6 @@ export default function App() {
         'custom-font': {
           fontFamily: 'PressStart2P_400Regular',
         },
-        
       };
     },
   });
@@ -56,7 +56,7 @@ export default function App() {
                 contentContainerStyle={css('flex-grow p-1 pt-2')}>
       <StatusBar style="auto"/>
       <Text style={css('text h3')}>
-        Klazify is a Style Sheet utility
+        Klazify v1.0 is a Style Sheet utility
       </Text>
       <Text style={css('text text-md')}>
         Klazify reuse styles just like CSS classes, highly inspired in bootstrap, but with
@@ -79,6 +79,7 @@ export default function App() {
       <Buttons/>
       <Texts/>
       <Grid/>
+      <PopoverExample/>
       <Forms/>
       <Utilities/>
       <Shadows/>
