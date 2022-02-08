@@ -17,7 +17,7 @@ export default function Tabs() {
             </View>
             <View style={css('rounded-t-3 bx-1 bt-1 tab tab-inactive bg-panel-50 mx-half')}>
                 <Text style={css('text text-gray-4 p-1')}>
-                    {'Tab Inactive'}
+                    {'Inactive'}
                 </Text>
             </View>
             <View style={css('rounded-t-3 bx-1 bt-1 tab tab-inactive bg-panel-50 mx-half disabled')}>
