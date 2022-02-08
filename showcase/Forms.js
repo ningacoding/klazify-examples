@@ -33,7 +33,7 @@ export default function Forms() {
         <TextInput style={css(`input text rounded-3 bg-panel ${isActive1 ? 'input-active' : ''}`)}
                    numberOfLines={1}
                    placeholder={'Type here...'}
-                   placeholderTextColor={color("$text").darken(0.5).hex()}
+                   placeholderTextColor={color('$gray').hex()}
                    onFocus={() => setIsActive1(true)}
                    onBlur={() => setIsActive1(false)}/>
 
@@ -43,7 +43,7 @@ export default function Forms() {
         <TextInput style={css(`text-area text rounded-3 bg-panel ${isActive2 ? 'input-active' : ''}`)}
                    multiline
                    placeholder={'Type here...'}
-                   placeholderTextColor={color("$text").darken(0.5).hex()}
+                   placeholderTextColor={color('$gray').hex()}
                    onFocus={() => setIsActive2(true)}
                    onBlur={() => setIsActive2(false)}/>
 
@@ -55,7 +55,7 @@ export default function Forms() {
                                     style={css('icon text-gray bg-panel-50 p-1 rounded-l-5 br-1 mr-1')}/>
             <TextInput style={css(`text rounded-3 flex pr-1`)}
                        numberOfLines={1}
-                       placeholderTextColor={color("$text").darken(0.5).hex()}
+                       placeholderTextColor={color('$gray').hex()}
                        placeholder={'Type your email here...'}/>
             <Text style={css('text text-gray bg-panel-50 p-1 rounded-r-5 bl-1')}>
                 {'@example.com'}
@@ -69,21 +69,21 @@ export default function Forms() {
                    numberOfLines={1}
                    editable={false}
                    placeholder={'Type here...'}
-                   placeholderTextColor={color("$text").darken(0.5).hex()}/>
+                   placeholderTextColor={color('$gray').hex()}/>
         <Text style={css('text text-danger')}>
             {'The error is still programing with StyleSheet.create()'}
         </Text>
 
         <View style={css('mt-2')}>
             <Text style={css('text mb-half')}>
-                {"Styling a Dropdown:"}
+                {'Styling a Dropdown:'}
             </Text>
             <Popover ref={popoverRef}
                      content={<PopoverStaticOptions onPress={closePopover}/>}>
                 <View style={css('row b-1 rounded-3 center')}>
                     <View style={css('flex row p-1')}>
-                        <Text style={css('text text-gray-4')}>
-                            {"Please select an item..."}
+                        <Text style={css('text text-gray')}>
+                            {'Please select an item...'}
                         </Text>
                     </View>
                     <MaterialCommunityIcons name={'chevron-down'}
@@ -95,7 +95,7 @@ export default function Forms() {
 
         <View style={css('mt-2')}>
             <Text style={css('text mb-half')}>
-                {"Your imagination is the limit:"}
+                {'Your imagination is the limit:'}
             </Text>
             <Popover ref={popoverRef2}
                      content={<PopoverStaticOptions onPress={closePopover}/>}>
@@ -104,7 +104,7 @@ export default function Forms() {
                         <Image style={css('img rounded w-2')}
                                source={{uri: 'https://ui-avatars.com/api/?background=0d6efd&color=fff&name=Klazify'}}/>
                         <Text style={css('text mx-1 flex')}>
-                            {"Klazify"}
+                            {'Klazify'}
                         </Text>
                         <MaterialCommunityIcons name={'check-circle'}
                                                 style={css('icon text-success')}/>
@@ -118,7 +118,7 @@ export default function Forms() {
 
         <View style={css('mt-2')}>
             <Text style={css('text mb-half')}>
-                {"Button Group:"}
+                {'Button Group:'}
             </Text>
             <View style={css('row rounded-5 bg-panel')}>
                 <TouchableOpacity onPress={() => alert('You chosen the best deal')}
