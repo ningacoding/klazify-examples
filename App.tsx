@@ -56,7 +56,7 @@ export default function App() {
                 contentContainerStyle={css('flex-grow p-1 pt-2')}>
       <StatusBar style="auto"/>
       <Text style={css('text h3')}>
-        Klazify v1.0 is a Style Sheet utility
+        Klazify is a Style Sheet utility
       </Text>
       <Text style={css('text text-md')}>
         Klazify reuse styles just like CSS classes, highly inspired in bootstrap, but with
