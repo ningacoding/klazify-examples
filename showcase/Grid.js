@@ -6,7 +6,7 @@ export default function Grid() {
         <Text style={css('h1')}>
             {'Grid'}
         </Text>
-        <View style={css('flex p-1 bg-red')}>
+        <View style={css('flex')}>
             <View style={css('row')}>
                 <View style={css('col b-1 bg-panel')}>
                     <Text style={css('text text-center p-1')}>
