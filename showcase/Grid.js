@@ -6,110 +6,112 @@ export default function Grid() {
         <Text style={css('h1')}>
             {'Grid'}
         </Text>
-        <View style={css('row')}>
-            <View style={css('col b-1 bg-panel')}>
-                <Text style={css('text text-center p-1')}>
-                    {'Column'}
-                </Text>
+        <View style={css('flex')}>
+            <View style={css('row')}>
+                <View style={css('col b-1 bg-panel')}>
+                    <Text style={css('text text-center p-1')}>
+                        {'Column'}
+                    </Text>
+                </View>
             </View>
-        </View>
-        <View style={css('row')}>
-            <View style={css('col bb-1 bx-1 bg-panel')}>
-                <Text style={css('text text-center p-1')}>
-                    {'Column'}
-                </Text>
+            <View style={css('row')}>
+                <View style={css('col bb-1 bx-1 bg-panel')}>
+                    <Text style={css('text text-center p-1')}>
+                        {'Column'}
+                    </Text>
+                </View>
+                <View style={css('col bb-1 br-1 bg-panel')}>
+                    <Text style={css('text text-center p-1')}>
+                        {'Column'}
+                    </Text>
+                </View>
             </View>
-            <View style={css('col bb-1 br-1 bg-panel')}>
-                <Text style={css('text text-center p-1')}>
-                    {'Column'}
-                </Text>
+            <View style={css('row')}>
+                <View style={css('col bb-1 bx-1 bg-panel')}>
+                    <Text style={css('text text-center p-1')}>
+                        {'Column'}
+                    </Text>
+                </View>
+                <View style={css('col bb-1 br-1 bg-panel')}>
+                    <Text style={css('text text-center p-1')}>
+                        {'Column'}
+                    </Text>
+                </View>
+                <View style={css('col bb-1 br-1 bg-panel')}>
+                    <Text style={css('text text-center p-1')}>
+                        {'Column'}
+                    </Text>
+                </View>
             </View>
-        </View>
-        <View style={css('row')}>
-            <View style={css('col bb-1 bx-1 bg-panel')}>
-                <Text style={css('text text-center p-1')}>
-                    {'Column'}
-                </Text>
+            <View style={css('row')}>
+                <View style={css('col bb-1 bx-1 bg-panel')}>
+                    <Text style={css('text text-center p-1')}>
+                        {'Column'}
+                    </Text>
+                </View>
+                <View style={css('col bb-1 br-1 bg-panel')}>
+                    <Text style={css('text text-center p-1')}>
+                        {'Column'}
+                    </Text>
+                </View>
+                <View style={css('col bb-1 br-1 bg-panel')}>
+                    <Text style={css('text text-center p-1')}>
+                        {'Column'}
+                    </Text>
+                </View>
+                <View style={css('col bb-1 br-1 bg-panel')}>
+                    <Text style={css('text text-center p-1')}>
+                        {'Column'}
+                    </Text>
+                </View>
             </View>
-            <View style={css('col bb-1 br-1 bg-panel')}>
-                <Text style={css('text text-center p-1')}>
-                    {'Column'}
-                </Text>
+            <View style={css('row')}>
+                <View style={css('col-auto bb-1 bx-1 bg-panel')}>
+                    <Text style={css('text text-center p-1')}>
+                        {'Column auto width (col-auto)'}
+                    </Text>
+                </View>
+                <View style={css('col bb-1 br-1 bg-panel')}>
+                    <Text style={css('text text-center p-1')}>
+                        {'Column'}
+                    </Text>
+                </View>
             </View>
-            <View style={css('col bb-1 br-1 bg-panel')}>
-                <Text style={css('text text-center p-1')}>
-                    {'Column'}
-                </Text>
+            <View style={css('row')}>
+                <View style={css('col-1 bb-1 bx-1 bg-panel')}>
+                    <Text style={css('text text-center p-1')}>
+                        {'Column 1'}
+                    </Text>
+                </View>
+                <View style={css('col-3 bb-1 br-1 bg-panel')}>
+                    <Text style={css('text text-center p-1')}>
+                        {'Column 3'}
+                    </Text>
+                </View>
             </View>
-        </View>
-        <View style={css('row')}>
-            <View style={css('col bb-1 bx-1 bg-panel')}>
-                <Text style={css('text text-center p-1')}>
-                    {'Column'}
-                </Text>
+            <View style={css('row')}>
+                <View style={css('col-2 bb-1 bx-1 bg-panel')}>
+                    <Text style={css('text text-center p-1')}>
+                        {'Column 2'}
+                    </Text>
+                </View>
+                <View style={css('col-2 bb-1 br-1 bg-panel')}>
+                    <Text style={css('text text-center p-1')}>
+                        {'Column 2'}
+                    </Text>
+                </View>
             </View>
-            <View style={css('col bb-1 br-1 bg-panel')}>
-                <Text style={css('text text-center p-1')}>
-                    {'Column'}
-                </Text>
-            </View>
-            <View style={css('col bb-1 br-1 bg-panel')}>
-                <Text style={css('text text-center p-1')}>
-                    {'Column'}
-                </Text>
-            </View>
-            <View style={css('col bb-1 br-1 bg-panel')}>
-                <Text style={css('text text-center p-1')}>
-                    {'Column'}
-                </Text>
-            </View>
-        </View>
-        <View style={css('row')}>
-            <View style={css('col-auto bb-1 bx-1 bg-panel')}>
-                <Text style={css('text text-center p-1')}>
-                    {'Column auto width (col-auto)'}
-                </Text>
-            </View>
-            <View style={css('col bb-1 br-1 bg-panel')}>
-                <Text style={css('text text-center p-1')}>
-                    {'Column'}
-                </Text>
-            </View>
-        </View>
-        <View style={css('row')}>
-            <View style={css('col-1 bb-1 bx-1 bg-panel')}>
-                <Text style={css('text text-center p-1')}>
-                    {'Column 1'}
-                </Text>
-            </View>
-            <View style={css('col-3 bb-1 br-1 bg-panel')}>
-                <Text style={css('text text-center p-1')}>
-                    {'Column 3'}
-                </Text>
-            </View>
-        </View>
-        <View style={css('row')}>
-            <View style={css('col-2 bb-1 bx-1 bg-panel')}>
-                <Text style={css('text text-center p-1')}>
-                    {'Column 2'}
-                </Text>
-            </View>
-            <View style={css('col-2 bb-1 br-1 bg-panel')}>
-                <Text style={css('text text-center p-1')}>
-                    {'Column 2'}
-                </Text>
-            </View>
-        </View>
-        <View style={css('row')}>
-            <View style={css('col-3 bb-1 bx-1 bg-panel')}>
-                <Text style={css('text text-center p-1')}>
-                    {'Column 3'}
-                </Text>
-            </View>
-            <View style={css('col-1 bb-1 br-1 bg-panel')}>
-                <Text style={css('text text-center p-1')}>
-                    {'Column 1'}
-                </Text>
+            <View style={css('row')}>
+                <View style={css('col-3 bb-1 bx-1 bg-panel')}>
+                    <Text style={css('text text-center p-1')}>
+                        {'Column 3'}
+                    </Text>
+                </View>
+                <View style={css('col-1 bb-1 br-1 bg-panel')}>
+                    <Text style={css('text text-center p-1')}>
+                        {'Column 1'}
+                    </Text>
+                </View>
             </View>
         </View>
 
