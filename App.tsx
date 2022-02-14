@@ -23,6 +23,7 @@ import PopoverExample from './showcase/Popover';
 import Tabs from './showcase/Tabs';
 import Themes from './showcase/Themes';
 import defaultTheme from './default.theme';
+import Badges from './showcase/Badges';
 
 klazify(defaultTheme);
 
@@ -78,6 +79,7 @@ export default function App() {
       <Utilities/>
       <Shadows/>
       <Cards/>
+      <Badges/>
       <Alerts/>
     
     </ScrollView>
