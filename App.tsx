@@ -51,12 +51,12 @@ export default function App() {
       <Text style={css('text h3')}>
         Klazify is a Style Sheet utility
       </Text>
-      <Text style={css('text text-md')}>
+      <Text style={css('text')}>
         Klazify reuse styles just like CSS classes, highly inspired in bootstrap, but with
         the React Native limitations / features. It gives a profesional and consistent look and feel, it also can
         improve the time and the way you develop with React Native.
       </Text>
-      <Text style={css('text text-md mt-1')}>
+      <Text style={css('text mt-1')}>
         Klazify loads all the Style Sheets from classes at the App launch and never more you StyleSheet.create()
         again, improving performance at runtime.
       </Text>

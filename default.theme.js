@@ -6,6 +6,7 @@ export default {
         defaultFontFamily: 'Roboto_400Regular',
     },
     extraGlobalVars: {
+        $rem: 16,
         '$blue-custom': '#37a1e3',
     },
     // customClasses: () => {
