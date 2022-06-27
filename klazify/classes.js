@@ -9,6 +9,7 @@ import {background} from './modules/background';
 import {width} from './modules/width';
 import {height} from './modules/height';
 import {typography} from './modules/typography';
+import {transforms} from './modules/transforms';
 
 /**
  * More info about extended stylesheet visit:
@@ -151,6 +152,7 @@ const defaultClasses = () => ({
   ...width,
   ...height,
   ...typography(),
+  ...transforms,
 
 // 'test': {boxShadow: 'auto'},
 });

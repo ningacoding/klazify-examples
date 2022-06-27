@@ -49,12 +49,14 @@ export default function App() {
         again, improving performance at runtime.
       </Text>
       
-      <View style={css('flex-row items-center mt-4 alert-warning p-4 bg-yellow-50 b-1 border-yellow-300 rounded-lg')}>
-        <MaterialCommunityIcons name={'alert'}
-                                style={css('icon icon-md text-yellow-500 center mr-4')}/>
-        <Text style={css('flex text text-justify text-yellow-600')}>
-          {'Klazify is NOT a component library, you can build the below example components just by combining, creating or overriding built-in classes.'}
-        </Text>
+      <View style={css('skew-x-24')}>
+        <View style={css('skew-y-12 flex-row items-center mt-4 alert-warning p-4 bg-yellow-50 b-1 border-yellow-300 rounded-lg')}>
+          <MaterialCommunityIcons name={'alert'}
+                                  style={css('icon icon-md text-yellow-500 center mr-4')}/>
+          <Text style={css('flex text text-justify text-yellow-600')}>
+            {'Klazify is NOT a component library, you can build the below example components just by combining, creating or overriding built-in classes.'}
+          </Text>
+        </View>
       </View>
     
     </ScrollView>
