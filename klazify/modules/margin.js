@@ -482,4 +482,19 @@ export const margin = {
   'mr-auto': {marginRight: 'auto'},
   'mb-auto': {marginBottom: 'auto'},
   'ml-auto': {marginLeft: 'auto'},
+
+  /**/
+  'm-half': {margin: '0.5rem'},
+  'my-half': {marginVertical: '0.5rem'},
+  'mx-half': {marginHorizontal: '0.5rem'},
+  'mt-half': {marginTop: '0.5rem'},
+  'mt-q3': {marginTop: '0.75rem'},
+  '-mt-half': {marginTop: '-0.5rem'},
+  '-m-half': {margin: '-0.5rem'},
+  'mr-half': {marginRight: '0.5rem'},
+  'mr-1-half': {marginRight: '1.5rem'},
+  'mb-half': {marginBottom: '0.5rem'},
+  '-mb-half': {marginBottom: '-0.5rem'},
+  '-ml-half': {marginLeft: '-0.5rem'},
+  'ml-half': {marginLeft: '0.5rem'},
 };

@@ -353,4 +353,14 @@ export const layout = {
   'z-40': {zIndex: 40},
   'z-50': {zIndex: 50},
   'z-auto': {zIndex: undefined},
+
+  /**/
+  'inline': {alignSelf: 'flex-start', position: 'relative'},
+  'align-right': {alignSelf: 'flex-end'},
+  'img': {aspectRatio: 1, height: 'auto'},
+  'img-4-9': {aspectRatio: 4 / 9, height: 'auto'},
+  'img-16-9': {aspectRatio: 16 / 9, height: 'auto'},
+  'img-9-4': {aspectRatio: 9 / 4, height: 'auto'},
+  'img-9-16': {aspectRatio: 9 / 16, height: 'auto'},
+  'center': {alignItems: 'center', justifyContent: 'center'},
 };

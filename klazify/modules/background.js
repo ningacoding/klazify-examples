@@ -1,4 +1,7 @@
-export const background = {
+import Color from 'color';
+import EStyleSheet from 'react-native-extended-stylesheet';
+
+export const background = () => ({
   'bg-transparent': {backgroundColor: 'transparent'},
   'bg-blue': {backgroundColor: '$blue'},
   'bg-indigo': {backgroundColor: '$indigo'},
@@ -247,4 +250,10 @@ export const background = {
   'bg-rose-700': {backgroundColor: '$rose700'},
   'bg-rose-800': {backgroundColor: '$rose800'},
   'bg-rose-900': {backgroundColor: '$rose900'},
-};
+
+  /**/
+  'bg-body': {backgroundColor: '$bgBody'},
+  'bg-popover': {backgroundColor: Color(EStyleSheet.value('$bgBody')).lighten(0.75).hex()},
+  'bg-panel': {backgroundColor: Color(EStyleSheet.value('$bgBody')).lighten(0.4).hex()},
+  'bg-panel-50': {backgroundColor: Color(EStyleSheet.value('$bgBody')).lighten(0.2).hex()},
+});

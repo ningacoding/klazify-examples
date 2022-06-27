@@ -244,4 +244,17 @@ export const padding = {
   'pr-96': {paddingRight: '24rem'},
   'pb-96': {paddingBottom: '24rem'},
   'pl-96': {paddingLeft: '24rem'},
+
+  /**/
+  'p-half': {padding: '0.5rem'},
+  'py-1-half': {padding: '1.5rem'},
+  'py-half': {paddingVertical: '0.5rem'},
+  'py-0.75': {paddingVertical: '0.75rem'},
+  'px-half': {paddingHorizontal: '0.5rem'},
+  'px-1-half': {paddingHorizontal: '1.5rem'},
+  'pt-half': {paddingTop: '0.5rem'},
+  'pr-half': {paddingRight: '0.5rem'},
+  'pr-1-half': {paddingRight: '1.5rem'},
+  'pb-half': {paddingBottom: '0.5rem'},
+  'pl-half': {paddingLeft: '0.5rem'},
 };
