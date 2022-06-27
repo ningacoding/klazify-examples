@@ -36,15 +36,15 @@ export default function App() {
     <ScrollView style={css('flex bg-body')}
                 contentContainerStyle={css('flex-grow p-4 pt-8')}>
       <StatusBar style="auto"/>
-      <Text style={css('text h3')}>
+      <Text style={css('text text-md text-bold mb-4 text-center')}>
         Klazify is a Style Sheet utility
       </Text>
-      <Text style={css('text')}>
-        Klazify reuse styles just like CSS classes, highly inspired in bootstrap, but with
+      <Text style={css('text text-justify')}>
+        Klazify reuse styles just like CSS classes, highly inspired in tailwindcss, but with
         the React Native limitations / features. It gives a profesional and consistent look and feel, it also can
         improve the time and the way you develop with React Native.
       </Text>
-      <Text style={css('text mt-4')}>
+      <Text style={css('text mt-4 text-justify')}>
         Klazify loads all the Style Sheets from classes at the App launch and never more you StyleSheet.create()
         again, improving performance at runtime.
       </Text>
@@ -53,7 +53,7 @@ export default function App() {
         <MaterialCommunityIcons name={'alert'}
                                 style={css('icon icon-md text-yellow-500 center mr-4')}/>
         <Text style={css('flex text text-justify text-yellow-600')}>
-          {'Klazify is NOT a component library, you can build the below example components just by combining, creating or overriding built-in classes.'}
+          {'Klazify is NOT a component library, you can build components just by combining, creating or overriding the provided classes.'}
         </Text>
       </View>
     
