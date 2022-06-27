@@ -15,6 +15,11 @@ import {typography} from './modules/typography';
  * @link https://github.com/vitalets/react-native-extended-stylesheet
  */
 
+/**
+ *  React Native only supports the next properties:
+ *  ["alignContent","alignItems","alignSelf","aspectRatio","backfaceVisibility","backgroundColor","borderBottomColor","borderBottomEndRadius","borderBottomLeftRadius","borderBottomRightRadius","borderBottomStartRadius","borderBottomWidth","borderColor","borderEndColor","borderEndWidth","borderLeftColor","borderLeftWidth","borderRadius","borderRightColor","borderRightWidth","borderStartColor","borderStartWidth","borderStyle","borderTopColor","borderTopEndRadius","borderTopLeftRadius","borderTopRightRadius","borderTopStartRadius","borderTopWidth","borderWidth","bottom","color","decomposedMatrix","direction","display","elevation","end","flex","flexBasis","flexDirection","flexGrow","flexShrink","flexWrap","fontFamily","fontSize","fontStyle","fontVariant","fontWeight","height","includeFontPadding","justifyContent","left","letterSpacing","lineHeight","margin","marginBottom","marginEnd","marginHorizontal","marginLeft","marginRight","marginStart","marginTop","marginVertical","maxHeight","maxWidth","minHeight","minWidth","opacity","overflow","overlayColor","padding","paddingBottom","paddingEnd","paddingHorizontal","paddingLeft","paddingRight","paddingStart","paddingTop","paddingVertical","position","resizeMode","right","rotation","scaleX","scaleY","shadowColor","shadowOffset","shadowOpacity","shadowRadius","start","textAlign","textAlignVertical","textDecorationColor","textDecorationLine","textDecorationStyle","textShadowColor","textShadowOffset","textShadowRadius","textTransform","tintColor","top","transform","transformMatrix","translateX","translateY","width","writingDirection","zIndex"]
+ */
+
 const defaultClasses = () => ({
 
   'btn-block': {flex: 1},
@@ -44,7 +49,6 @@ const defaultClasses = () => ({
   },
 
 
-
   'input-active': {borderWidth: 1, borderColor: '$primary'},
   'input-error': {borderWidth: 1, borderColor: '$danger'},
   'input': {borderWidth: 1, borderColor: '$gray2', paddingHorizontal: '1rem', paddingVertical: '0.75rem', margin: 0},
@@ -70,7 +74,6 @@ const defaultClasses = () => ({
   'position-absolute': {position: 'absolute'},
   'top-15': {top: '15rem'},
   'top-13': {top: '13rem'},
-
 
 
   'icon': {fontSize: '1.5rem'},
@@ -110,48 +113,6 @@ const defaultClasses = () => ({
     justifyContent: 'center',
     textAlign: 'center',
   },
-  'bl-0': {borderLeftWidth: 0, borderColor: 'transparent'},
-  'br-0': {borderRightWidth: 0, borderColor: 'transparent'},
-  'b-0': {borderWidth: 0, borderColor: 'transparent'},
-  'b-1': {borderWidth: 1, borderColor: '$gray2'},
-  'b-2': {borderWidth: 2, borderColor: '$gray2'},
-  'bt-1': {borderTopWidth: 1, borderColor: '$gray2'},
-  'br-1': {borderRightWidth: 1, borderColor: '$gray2'},
-  'bb-0': {borderBottomWidth: 0},
-  'bb-1': {borderBottomWidth: 1, borderColor: '$gray2'},
-  'bl-1': {borderLeftWidth: 1, borderColor: '$gray2'},
-  'bx-1': {borderLeftWidth: 1, borderRightWidth: 1, borderColor: '$gray2'},
-  'by-1': {borderTopWidth: 1, borderBottomWidth: 1, borderColor: '$gray2'},
-  'bt-2': {borderTopWidth: 2, borderColor: '$gray2'},
-  'br-2': {borderRightWidth: 2, borderColor: '$gray2'},
-  'bb-2': {borderBottomWidth: 2, borderColor: '$gray2'},
-  'bl-2': {borderLeftWidth: 2, borderColor: '$gray2'},
-  'bx-2': {borderLeftWidth: 2, borderRightWidth: 2, borderColor: '$gray2'},
-  'by-2': {borderBottomWidth: 2, borderTopWidth: 2, borderColor: '$gray2'},
-  'bt-3': {borderTopWidth: 3, borderColor: '$gray2'},
-  'br-3': {borderRightWidth: 3, borderColor: '$gray2'},
-  'bb-3': {borderBottomWidth: 3, borderColor: '$gray2'},
-  'bl-3': {borderLeftWidth: 3, borderColor: '$gray2'},
-  'bx-3': {borderLeftWidth: 3, borderRightWidth: 3, borderColor: '$gray2'},
-  'by-3': {borderBottomWidth: 3, borderTopWidth: 3, borderColor: '$gray2'},
-  'bt-4': {borderTopWidth: 4, borderColor: '$gray2'},
-  'br-4': {borderRightWidth: 4, borderColor: '$gray2'},
-  'bb-4': {borderBottomWidth: 4, borderColor: '$gray2'},
-  'bl-4': {borderLeftWidth: 4, borderColor: '$gray2'},
-  'bx-4': {borderLeftWidth: 4, borderRightWidth: 4, borderColor: '$gray2'},
-  'by-4': {borderBottomWidth: 4, borderTopWidth: 4, borderColor: '$gray2'},
-  'bt-5': {borderTopWidth: 5, borderColor: '$gray2'},
-  'br-5': {borderRightWidth: 5, borderColor: '$gray2'},
-  'bb-5': {borderBottomWidth: 5, borderColor: '$gray2'},
-  'bl-5': {borderLeftWidth: 5, borderColor: '$gray2'},
-  'bx-5': {borderLeftWidth: 5, borderRightWidth: 5, borderColor: '$gray2'},
-  'by-5': {borderBottomWidth: 5, borderTopWidth: 5, borderColor: '$gray2'},
-  'bt-6': {borderTopWidth: 6, borderColor: '$gray2'},
-  'br-6': {borderRightWidth: 6, borderColor: '$gray2'},
-  'bb-6': {borderBottomWidth: 6, borderColor: '$gray2'},
-  'bl-6': {borderLeftWidth: 6, borderColor: '$gray2'},
-  'bx-6': {borderLeftWidth: 6, borderRightWidth: 6, borderColor: '$gray2'},
-  'by-6': {borderBottomWidth: 6, borderTopWidth: 6, borderColor: '$gray2'},
   'z-index-min': {position: 'absolute', zIndex: 0},
   'z-index-max': {position: 'absolute', zIndex: 9999},
   'mh-input': {minHeight: '3rem'},
@@ -192,8 +153,7 @@ const defaultClasses = () => ({
   ...height,
   ...typography(),
 
-
-// 'test': {placeContent: 'auto'},
+// 'test': {boxShadow: 'auto'},
 });
 
 /**
