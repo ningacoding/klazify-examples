@@ -11,19 +11,7 @@ import AppLoading from 'expo-app-loading';
 import {PressStart2P_400Regular} from '@expo-google-fonts/press-start-2p';
 import {Roboto_400Regular, useFonts} from '@expo-google-fonts/roboto';
 import {MaterialCommunityIcons} from '@expo/vector-icons';
-import Buttons from './showcase/Buttons';
-import Texts from './showcase/Texts';
-import Grid from './showcase/Grid';
-import Utilities from './showcase/Utilities';
-import Cards from './showcase/Cards';
-import Shadows from './showcase/Shadows';
-import Alerts from './showcase/Alerts';
-import Forms from './showcase/Forms';
-import PopoverExample from './showcase/Popover';
-import Tabs from './showcase/Tabs';
-import Themes from './showcase/Themes';
 import defaultTheme from './default.theme';
-import Badges from './showcase/Badges';
 
 klazify(defaultTheme);
 
@@ -46,7 +34,7 @@ export default function App() {
   
   return (
     <ScrollView style={css('flex bg-body')}
-                contentContainerStyle={css('flex-grow p-1 pt-2')}>
+                contentContainerStyle={css('flex-grow p-4 pt-8')}>
       <StatusBar style="auto"/>
       <Text style={css('text h3')}>
         Klazify is a Style Sheet utility
@@ -56,31 +44,18 @@ export default function App() {
         the React Native limitations / features. It gives a profesional and consistent look and feel, it also can
         improve the time and the way you develop with React Native.
       </Text>
-      <Text style={css('text mt-1')}>
+      <Text style={css('text mt-4')}>
         Klazify loads all the Style Sheets from classes at the App launch and never more you StyleSheet.create()
         again, improving performance at runtime.
       </Text>
       
-      <View style={css('row center mt-1 alert-warning p-1 rounded-3')}>
+      <View style={css('flex-row items-center mt-4 alert-warning p-4 bg-yellow-50 b-1 border-yellow-300 rounded-lg')}>
         <MaterialCommunityIcons name={'alert'}
-                                style={css('icon icon-md text-warning center mr-1')}/>
-        <Text style={css('flex text text-alert-warning center')}>
+                                style={css('icon icon-md text-yellow-500 center mr-4')}/>
+        <Text style={css('flex text text-justify text-yellow-600')}>
           {'Klazify is NOT a component library, you can build the below example components just by combining, creating or overriding built-in classes.'}
         </Text>
       </View>
-      
-      <Themes onChange={() => setIsRender(false)}/>
-      <Buttons/>
-      <Texts/>
-      <Grid/>
-      <Tabs/>
-      <PopoverExample/>
-      <Forms/>
-      <Utilities/>
-      <Shadows/>
-      <Cards/>
-      <Badges/>
-      <Alerts/>
     
     </ScrollView>
   );
