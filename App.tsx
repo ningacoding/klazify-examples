@@ -35,8 +35,8 @@ export default function App() {
   return (
     <ScrollView style={css('flex')}
                 contentContainerStyle={css('flex-grow pt-8 bg-purple-900')}>
-      <StatusBar style="auto"
-                 backgroundColor={value('$sky800')}/>
+      <StatusBar style="light"
+                 backgroundColor={value('$purple900')}/>
       <View style={css('row')}>
         <View style={css('flex-1 h-2 bg-green-500')}/>
         <View style={css('flex-1 h-2 bg-yellow-500')}/>
@@ -65,6 +65,67 @@ export default function App() {
           <Text style={css('flex-1 text text-justify text-yellow-600')}>
             {'Klazify is NOT a component library, you can build components just by combining, creating or overriding the provided classes.'}
           </Text>
+        </View>
+        
+        <View style={css('pt-4 pb-2 border rounded border-gray-200 mt-4 flex')}>
+          <View style={css('flex-row flex-wrap')}>
+            <View style={css('col-1 items-center')}>
+              <MaterialCommunityIcons name={'circle'}
+                                      style={css('icon icon-3xs text-primary mr-2 mb-2')}/>
+            </View>
+            <View style={css('col-1 items-center')}>
+              <MaterialCommunityIcons name={'circle'}
+                                      style={css('icon icon-2xs text-primary mr-2 mb-2')}/>
+            </View>
+            <View style={css('col-1 items-center')}>
+              <MaterialCommunityIcons name={'circle'}
+                                      style={css('icon icon-xs text-primary mr-2 mb-2')}/>
+            </View>
+            <View style={css('col-1 items-center')}>
+              <MaterialCommunityIcons name={'circle'}
+                                      style={css('icon icon-sm text-primary mr-2 mb-2')}/>
+            </View>
+            <View style={css('col-1 items-center')}>
+              <MaterialCommunityIcons name={'circle'}
+                                      style={css('icon text-primary mr-2 mb-2')}/>
+            </View>
+            <View style={css('col-1 items-center')}>
+              <MaterialCommunityIcons name={'circle'}
+                                      style={css('icon icon-md text-primary mr-2 mb-2')}/>
+            </View>
+            <View style={css('col-1 items-center')}>
+              <MaterialCommunityIcons name={'circle'}
+                                      style={css('icon icon-lg text-primary mr-2 mb-2')}/>
+            </View>
+            <View style={css('col-1 items-center')}>
+              <MaterialCommunityIcons name={'circle'}
+                                      style={css('icon icon-xl text-primary mr-2 mb-2')}/>
+            </View>
+            <View style={css('col-1 items-center')}>
+              <MaterialCommunityIcons name={'circle'}
+                                      style={css('icon icon-2xl text-primary mr-2 mb-2')}/>
+            </View>
+            <View style={css('col-1 items-center')}>
+              <MaterialCommunityIcons name={'circle'}
+                                      style={css('icon icon-3xl text-primary mr-2 mb-2')}/>
+            </View>
+          </View>
+        </View>
+        
+        <View style={css('py-4')}>
+          <View style={css('rounded bg-blue-600 flex-row center p-1')}>
+            <View style={css('absolute p-1 left-2 bg-blue-800 rounded')}>
+              <MaterialCommunityIcons name={'check'}
+                                      style={css('icon text-white')}/>
+            </View>
+            <Text style={css('flex-1 text text-white text-center mx-10 py-2 border-r border-blue-500')}>
+              {'PRESS ME'}
+            </Text>
+            <View style={css('absolute p-2 right-0')}>
+              <MaterialCommunityIcons name={'chevron-right'}
+                                      style={css('icon text-white')}/>
+            </View>
+          </View>
         </View>
       </View>
     
