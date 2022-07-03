@@ -20,5 +20,5 @@ export default {
       },
     };
   },
-  logs: true,
+  // logs: true,
 }

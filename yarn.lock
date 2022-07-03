@@ -3605,10 +3605,10 @@ klaw@^1.0.0:
   optionalDependencies:
     graceful-fs "^4.1.9"
 
-klazify@1.1.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/klazify/-/klazify-1.1.1.tgz#5cdea9ddb3538405cb38b9abb71320df0f17e8d8"
-  integrity sha512-zmfhImMArtONUyQQzmrLy8flKNr4PcBMaiLkEcTC7HxtVYLobAjvbP3fLqUQvla1Y2QGd6nqe0ooN5XUkJ5dnA==
+klazify@1.1.2-beta3:
+  version "1.1.2-beta3"
+  resolved "https://registry.yarnpkg.com/klazify/-/klazify-1.1.2-beta3.tgz#4f786ecd09897e13c0c3b32a6e754c0a441963d2"
+  integrity sha512-o34jqPvA5FHvdzTVIsNhm7pjk0A7UhN34CyyTbehx8Xv2dxkt2u4m0ERsD7xXD4gBbUag06v0VDy4cJ4Rt3+bw==
   dependencies:
     color "3.2.1"
     lodash.get "4.4.2"
