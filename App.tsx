@@ -1,4 +1,4 @@
-import React, {Attributes, LegacyRef, useEffect, useRef, useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import {ScrollView, Text, View} from 'react-native';
 /**
  * You can use init() method directly,
@@ -92,7 +92,7 @@ export default function App() {
         </View>
       
       </ScrollView>
-      <View style={css('p-4 border-t border-gray-300')}>
+      <View style={css('p-3 border-t border-gray-300')}>
         <Button onPress={() => refPopover.current.show()}/>
       </View>
     </View>
