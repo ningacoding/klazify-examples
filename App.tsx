@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {Attributes, LegacyRef, useEffect, useRef, useState} from 'react';
 import {ScrollView, Text, View} from 'react-native';
 /**
  * You can use init() method directly,
@@ -22,6 +22,8 @@ export default function App() {
     PressStart2P_400Regular,
     Roboto_400Regular,
   });
+  
+  const refPopover = useRef<any>(null);
   
   const [isRender, setIsRender] = useState(true);
   
@@ -70,7 +72,8 @@ export default function App() {
           </View>
           
           <View style={css('py-4')}>
-            <Popover contentStyle={css('')}
+            <Popover ref={refPopover}
+                     contentStyle={css('')}
                      content={<View style={css('p-4 rounded-full')}>
                        <Text style={css('text')}>
                          {'This is a Popover content'}
@@ -90,7 +93,7 @@ export default function App() {
       
       </ScrollView>
       <View style={css('p-4 border-t border-gray-300')}>
-        <Button/>
+        <Button onPress={() => refPopover.current.show()}/>
       </View>
     </View>
   );
